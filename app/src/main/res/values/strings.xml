@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CountBook</string>
+    <string name="create_count_button">Create</string>
+    <string name="prompt_count_name">Name</string>
+    <string name="prompt_count_date">Date</string>
+    <string name="prompt_initial_value">Initial value</string>
+    <string name="current_value">current value</string>
+    <string name="prompt_comment">Comment</string>
+</resources>
