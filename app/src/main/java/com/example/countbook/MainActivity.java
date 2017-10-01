@@ -1,44 +1,21 @@
 package com.example.countbook;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.icu.text.AlphabeticIndex;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-
-import static com.example.countbook.R.id.parent;
 
 /**
- * Represent a Counter
+ *  view Counter ListView
  *
- *  @author shuyang2
+ *  @author Shuyang Li
  *  @version 1.0
  *  @since 1.0
  *  @see ViewCounter

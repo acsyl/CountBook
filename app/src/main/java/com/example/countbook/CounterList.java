@@ -1,12 +1,8 @@
 package com.example.countbook;
 
 import android.content.Context;
-import android.util.Log;
-import android.widget.EditText;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileInputStream;
@@ -150,7 +146,6 @@ public class CounterList {
      */
     public void loadAllRecord(Context context) {
         try {
-            //Log.d("number", "apple");
             FileInputStream fis = context.openFileInput(FILENAME);
             BufferedReader in = new BufferedReader(new InputStreamReader(fis));
 

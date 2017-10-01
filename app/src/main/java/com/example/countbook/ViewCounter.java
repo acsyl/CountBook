@@ -3,38 +3,12 @@ package com.example.countbook;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-
-import static android.provider.Telephony.Mms.Part.FILENAME;
-
-//package com.example.countbook;
-
 import android.content.Context;
-
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
-
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-
-import com.google.gson.Gson;
-
-import java.io.BufferedWriter;
-
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.util.Date;
 
 
