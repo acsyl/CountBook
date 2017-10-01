@@ -35,6 +35,26 @@ import java.util.ArrayList;
 
 import static com.example.countbook.R.id.parent;
 
+/**
+ * Represent a Counter
+ *
+ *  @author shuyang2
+ *  @version 1.0
+ *  @since 1.0
+ *  @see ViewCounter
+ */
+
+
+
+/*＊
+ * MainActivity
+ *
+ * The main activity for the application, mainly responsible for displaying
+ * the opening screen and showing the list view of counters. Also, handles
+ * incrementing, decrementing, and resetting actions for any counter.
+ *
+ *
+ */
 public class MainActivity extends AppCompatActivity {
     private static final String FILENAME = "file.sav";
     private ListView OldCountsList;
@@ -62,9 +82,7 @@ public class MainActivity extends AppCompatActivity {
         OldCountsList = (ListView) findViewById(R.id.OldCountsList);
         TList.loadAllRecord(context);
         countTextView.setText(String.format("shuyang2-CountBook\ncount: %s", TList.numberOfCount()));
-//        adapter = new ArrayAdapter<Counter>(this,
-//                R.layout.count_list_item, TList.getCounterList());
-//        OldCountsList.setAdapter(adapter);
+        // when listview clicked, intent to ViewCounter class
         OldCountsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -79,30 +97,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        //update the view
         TList.loadAllRecord(context);
         countTextView.setText(String.format("shuyang2-CountBook\ncount: %s", TList.numberOfCount()));
-        //Log.d("number", Integer.toString(TList.numberOfCount()));
 
-        //TList.saveInFile()
         adapter = new ArrayAdapter<Counter>(this,
                 R.layout.count_list_item, TList.getCounterList());
         OldCountsList.setAdapter(adapter);
    }
-
-
-//        });
-//    }
-
-
-//
-//    }
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        CountList.clear();
-//        loadAllRecord();
-//        adapter.notifyDataSetChanged();
-//    }
 
 
 

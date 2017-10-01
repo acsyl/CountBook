@@ -1,13 +1,29 @@
 package com.example.countbook;
-import android.util.Log;
+
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Created by ACsy on 2017-09-25.
+* Represent a Counter
+*
+*  @author shuyang2
+*  @version 1.0
+*  @since 1.0
+*  @see CounterList, CreateCounter, EditCounter,ViewCounter
  */
+
+
+
+/*＊
+* constructs Counter objects
+*
+* @param String Counter name
+* @param String Counter currentvalue
+* @param String Counter comment
+* @param String Counter Date
+*/
 
 public class Counter {
 
@@ -17,16 +33,18 @@ public class Counter {
     private  String comment;
     private  Date date;
 
+
+
+
     public Counter (String name, String initialvalue, String comment){
         this.name = name;
         this.currentvalue = initialvalue;
         this.initialvalue = initialvalue;
         this.comment = comment;
         this.date = new Date();
-//        this.currentvalue = initialvalue;
     }
 
-    @Override
+
     public String toString(){
         DateFormat df = new SimpleDateFormat("yyyy/MM/dd");
         String rDate = df.format(date);
@@ -45,12 +63,11 @@ public class Counter {
     }
 
     public int getCurrentvalue(){
-        Integer x=Integer.valueOf(currentvalue);
+        Integer x=Integer.valueOf(currentvalue); // string change to integer
         return x;
 
     }
     public void setCurrentvalue(int i){
-        //this.date = new Date();
         this.currentvalue=Integer.toString(i);
 
     }

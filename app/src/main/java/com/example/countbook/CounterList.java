@@ -20,7 +20,12 @@ import java.util.ArrayList;
 import java.util.Date;
 
 /**
- * Created by ACsy on 2017-09-26.
+ * Represent a CounterList
+ *
+ *  @author shuyang2
+ *  @version 1.0
+ *  @since 1.0
+ *  @see Counter, CreateCounter, EditCounter, ViewCounter
  */
 
 public class CounterList {
@@ -36,17 +41,26 @@ public class CounterList {
         return this.counterList;
     }
 
-    // other methods here
+    // methods here
     public void addCounter(Counter newcounter){
         counterList.add(newcounter);
 
 
     }
+    /**
+     * delete Counter
+     * @param i counterindex
+     *
+     */
 
     public void deleteCounter(int i){
         counterList.remove(i);
     }
-
+    /**
+     * increase Counter currentvalue
+     * @param i counterindex
+     *
+     */
     public void incrementCurrentValue(int i){
         Counter incrementItem = counterList.get(i);
         date = new Date();
@@ -55,6 +69,11 @@ public class CounterList {
         int increby1 = origin1+1;
         incrementItem.setCurrentvalue(increby1);
     }
+    /**
+     * decrease Counter currentvalue
+     * @param i counterindex
+     *
+     */
 
     public void decrementCurrentValue(int i){
         Counter decrementItem = counterList.get(i);
@@ -67,6 +86,12 @@ public class CounterList {
         }
         decrementItem.setCurrentvalue(decreby1);
     }
+    /**
+     * reset Counter currentvalue
+     * @param i counterindex
+     *
+     */
+
     public void resetCurrentValue(int i){
         Counter resetItem = counterList.get(i);
         date = new Date();
@@ -76,6 +101,13 @@ public class CounterList {
 
 
     }
+    /**
+     * edit Counter contents
+     * @param i counterindex
+     * @param name counter name
+     * @param comment counter comment
+     * @param initialvalue counter initialvalue
+     */
 
     public void editContents(int i, String name, String comment, String initialvalue){
         Counter editItem = counterList.get(i);
@@ -84,6 +116,12 @@ public class CounterList {
         editItem.setInitialvalue(initialvalue);
 
     }
+    /**
+     * edit Counter currentvalue
+     * @param i counterindex
+     * @param currentvalue
+     */
+
     public void editCurrentvalue(int i, int currentvalue){
         Counter editItem1 = counterList.get(i);
         //Log.d("sdfsdfs","sdffsf");
@@ -100,6 +138,11 @@ public class CounterList {
         return counterList.size();
     }
 
+    /**
+     * load Counter from file
+     * @param context
+     *
+     */
     public void loadAllRecord(Context context) {
         try {
             //Log.d("number", "apple");
@@ -123,6 +166,12 @@ public class CounterList {
 //        }
 
     }
+
+    /**
+     * save Counter to file
+     * @param context
+     *
+     */
 
 
     public void saveInFile(Context context) {

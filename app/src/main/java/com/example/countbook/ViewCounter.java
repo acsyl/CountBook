@@ -39,7 +39,12 @@ import java.util.Date;
 
 
 /**
- * Created by ACsy on 2017-09-25.
+ * View a Counter
+ *
+ *  @author shuyang2
+ *  @version 1.0
+ *  @since 1.0
+ *  @see CounterList
  */
 public class ViewCounter extends AppCompatActivity {
 
@@ -60,21 +65,22 @@ public class ViewCounter extends AppCompatActivity {
         setContentView(R.layout.view_counter);
         context = getApplicationContext();
         sList.loadAllRecord(context);
+        // get Textview
         select_name = (TextView) findViewById(R.id.view_name);
         select_date = (TextView) findViewById(R.id.view_date);
         select_initialvalue = (TextView) findViewById(R.id.view_initial_value);
         select_currentvalue = (TextView) findViewById(R.id.view_current_value);
         select_comment = (TextView) findViewById(R.id.view_comment);
+        // get Intent
         Intent intent = getIntent();
         index = intent.getIntExtra("info",-1);
-//        abc.setText(Integer.toString(index));
-
         selectCounter=sList.getCounter(index);
         String Name=selectCounter.getName();
         select_name.setText(Name);
         Date Date=selectCounter.getDate();
         DateFormat df = new SimpleDateFormat("yyyy/MM/dd");
         String reportDate = df.format(Date);
+        // set view
         select_date.setText(reportDate);
         String initialvalue = selectCounter.getInitialvalue();
         select_initialvalue.setText(initialvalue);
@@ -83,11 +89,9 @@ public class ViewCounter extends AppCompatActivity {
         String comment = selectCounter.getComment();
         select_comment.setText(comment);
 
-        //String sindex=Integer.toString(index);
 
         Button EditButton = (Button) findViewById(R.id.edit_button);
         Button CancelButton = (Button) findViewById(R.id.cancel_button);
-//
         EditButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

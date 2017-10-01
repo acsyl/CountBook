@@ -18,10 +18,13 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 
 
-
-
 /**
- * Created by ACsy on 2017-09-25.
+ * Create a Counter
+ *
+ *  @author shuyang2
+ *  @version 1.0
+ *  @since 1.0
+ *  @see Counter
  */
 public class CreateCounter extends AppCompatActivity {
 

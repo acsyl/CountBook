@@ -15,8 +15,14 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Created by ACsy on 2017-09-27.
+ * Edit a Counter
+ *
+ *  @author shuyang2
+ *  @version 1.0
+ *  @since 1.0
+ *  @see CounterList
  */
+
 
 public class EditCounter extends AppCompatActivity {
 
@@ -36,40 +42,27 @@ public class EditCounter extends AppCompatActivity {
         setContentView(R.layout.activity_edit_count);
         context = getApplicationContext();
         Intent intent = getIntent();
+        //get index from ViewCounter
         eindex = intent.getIntExtra("edit",-1);
+        //load recorder to an empty counterList
         eList.loadAllRecord(context);
+        //get this counterlist
         editCounter=eList.getCounter(eindex);
+        //set text to EditText
         edit_name = (EditText) findViewById(R.id.edit_name);
         edit_name.setText(editCounter.getName());
 
 
-//        edit_date = (TextView) findViewById(R.id.view_date);
         edit_initialvalue = (EditText) findViewById(R.id.edit_initial_value);
         edit_initialvalue.setText(editCounter.getInitialvalue());
 
         edit_comment = (EditText) findViewById(R.id.edit_comment);
         edit_comment.setText(editCounter.getComment());
-//
-//
+
         edit_currentvalue = (EditText) findViewById(R.id.edit_current_value);
         edit_currentvalue.setText(Integer.toString(editCounter.getCurrentvalue()));
 
-//        String Name=selectCounter.getName();
-//        select_name.setText(Name);
-//        Date Date=selectCounter.getDate();
-//        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
-//        String reportDate = df.format(Date);
-//        select_date.setText(reportDate);
-//        String initialvalue = selectCounter.getInitialvalue();
-//        select_initialvalue.setText(initialvalue);
-//        int currentvalue = selectCounter.getCurrentvalue();
-//        select_currentvalue.setText(Integer.toString(currentvalue));
-//        String comment = selectCounter.getComment();
-//        select_comment.setText(comment);
-
-//        eList.deleteCounter(0);
-//        eList.saveInFile(context);
-
+        //implement Button
         Button deleteButton = (Button) findViewById(R.id.delete_button);
         Button incrementButton = (Button) findViewById(R.id.increase_button);
         Button decrementButton = (Button) findViewById(R.id.decrease_button);
@@ -130,12 +123,10 @@ public class EditCounter extends AppCompatActivity {
                 String tedit_comment = edit_comment.getText().toString();
                 String tedit_initialvalue = edit_initialvalue.getText().toString();
                 String tedit_currentvalue = edit_currentvalue.getText().toString();
-                //Log.d("tedit_currentvalue",tedit_currentvalue);
-                //Log.d("tedit_editCounter",Integer.toString(editCounter.getCurrentvalue()));
+
                 int a = Integer.parseInt(tedit_currentvalue);
                 if (a != editCounter.getCurrentvalue()) {
 
-                    //Log.d("abcabc","adsadas");
                     eList.editCurrentvalue(eindex,a);
 
                 }
