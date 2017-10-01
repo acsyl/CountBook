@@ -50,8 +50,7 @@ import static com.example.countbook.R.id.parent;
  * MainActivity
  *
  * The main activity for the application, mainly responsible for displaying
- * the opening screen and showing the list view of counters. Also, handles
- * incrementing, decrementing, and resetting actions for any counter.
+ * the ListView of counter.
  *
  *
  */
