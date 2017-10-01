@@ -63,6 +63,8 @@ public class Counter {
     }
 
     public int getCurrentvalue(){
+        // Taken from https://stackoverflow.com/questions/5585779/how-to-convert-a-string-to-an-int-in-java
+        // 2017-09-26
         Integer x=Integer.valueOf(currentvalue); // string change to integer
         return x;
 
