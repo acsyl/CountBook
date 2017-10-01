@@ -22,7 +22,7 @@ import java.util.Date;
 /**
  * Represent a CounterList
  *
- *  @author shuyang2
+ *  @author Shuyang Li
  *  @version 1.0
  *  @since 1.0
  *  @see Counter, CreateCounter, EditCounter, ViewCounter
@@ -42,6 +42,11 @@ public class CounterList {
     }
 
     // methods here
+    /**
+     * add Counter
+     * @param newcounter Counter
+     *
+     */
     public void addCounter(Counter newcounter){
         counterList.add(newcounter);
 

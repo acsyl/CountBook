@@ -41,7 +41,7 @@ import java.util.Date;
 /**
  * View a Counter
  *
- *  @author shuyang2
+ *  @author Shuyang Li
  *  @version 1.0
  *  @since 1.0
  *  @see CounterList
