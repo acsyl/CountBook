@@ -20,7 +20,7 @@ CountBook can count things are supplies being consumed like food or medicine, or
 + [lonelyTwitter](https://github.com/watts1/lonelyTwitter)
 
 
-### License
+## License
 -----
 This software is under [MIT license](http://opensource.org/licenses/MIT)
 ```
