@@ -17,6 +17,15 @@ import android.widget.EditText;
  *  @see CounterList
  */
 
+/*＊
+* EditCounter Class
+*
+* This class is to edit counter which includes those edit button and text edit
+* When user edit counter, this class will call CounterList Class to edit counter object
+*
+*
+*/
+
 
 public class EditCounter extends AppCompatActivity {
 
