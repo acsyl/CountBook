@@ -17,7 +17,8 @@ import java.util.Date;
 
 
 /*＊
-* constructs Counter objects
+* When call this class, it will constructs Counter objects which stores the
+* counter information or modifier the Counter information.
 *
 * @param String Counter name
 * @param String Counter currentvalue
