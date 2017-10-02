@@ -17,6 +17,15 @@ import android.widget.EditText;
  *  @since 1.0
  *  @see Counter
  */
+
+/*＊
+* CreateCounter Class
+*
+* This class is for create new counter
+* When user create counter, this class will call Counter to create and put it in CounterList
+*
+*/
+
 public class CreateCounter extends AppCompatActivity {
 
     private EditText create_name;
