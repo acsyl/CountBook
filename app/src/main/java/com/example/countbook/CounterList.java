@@ -24,6 +24,16 @@ import java.util.Date;
  *  @see Counter, CreateCounter, EditCounter, ViewCounter
  */
 
+/*＊
+* CounterList Class
+*
+* This class is using ArrayList to store the counter object and create some new methods in
+* CounterList to edit Counter object
+*
+*
+*/
+
+
 public class CounterList {
     private static final String FILENAME = "file.sav";
     private ArrayList<Counter> counterList;
@@ -37,7 +47,7 @@ public class CounterList {
         return this.counterList;
     }
 
-    // methods here
+
     /**
      * add Counter
      * @param newcounter Counter
