@@ -20,6 +20,13 @@ import java.util.Date;
  *  @since 1.0
  *  @see CounterList
  */
+
+/*＊
+* ViewList Class
+*
+* When user try to get the detailed information, MainActivity will call this method
+*
+*/
 public class ViewCounter extends AppCompatActivity {
 
 
