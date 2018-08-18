@@ -3,7 +3,7 @@
 CountBook can count things are supplies being consumed like food or medicine, or people entering some event. 
 
 ## UML
-+[UML](https://github.com/acsyl/CountBook/blob/master/doc/shuyang2-CountBook.png)
++ [UML](https://github.com/acsyl/CountBook/blob/master/doc/shuyang2-CountBook.png)
 
 ## Notes
 + This app is backward compatible till API 18
